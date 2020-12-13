@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:awesomeapp/drawer.dart';
 import 'dart:convert';
+import 'package:awesomeapp/utils/Constants.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -29,7 +30,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Flutter App')),
+      appBar: AppBar(title: Text('Flutter App'), actions: [
+        IconButton(
+            icon: Icon(Icons.exit_to_app),
+            onPressed: () {
+              Constants.prefs.setBool("loggedIn", false);
+              Navigator.pushReplacementNamed(context, '/login');
+            })
+      ]),
       body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: data != null
