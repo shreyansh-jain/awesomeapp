@@ -9,30 +9,48 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Flutter App')),
-        body: Center(
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Align(
+            alignment: Alignment.centerLeft,
             child: Container(
-                padding: const EdgeInsets.all(8),
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey[400],
-                          blurRadius: 5,
-                          spreadRadius: 0,
-                          offset: Offset(2.0, 5.0))
-                    ],
-                    color: Colors.yellow,
-                    gradient:
-                        LinearGradient(colors: [Colors.yellow, Colors.red])),
-                width: 100,
-                height: 100,
-                child: Text('I am a box',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20
-                    )))));
+              width: 200,
+              color: Colors.black,
+              height: 400,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      // Container(
+                      //   padding: const EdgeInsets.all(8),
+                      //   width: 100,
+                      //   height: 100,
+                      //   color: Colors.red,
+                      // ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        width: 100,
+                        height: 100,
+                        color: Colors.green,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        width: 100,
+                        height: 100,
+                        color: Colors.yellow,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        width: 100,
+                        height: 100,
+                        color: Colors.blue,
+                      )
+                    ]),
+              ),
+            ),
+          ),
+        ));
   }
 }
