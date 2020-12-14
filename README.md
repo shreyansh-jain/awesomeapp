@@ -11,6 +11,8 @@ Connect a device and run the command
 
 flutter run
 
+## To download and run this apk, use the following url:
+[URL](https://tinyurl.com/y7k5f2hm)
 ## External Help (Official Docs to get Started to Flutter):
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
